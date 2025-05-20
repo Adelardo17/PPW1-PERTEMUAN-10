@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kalkulator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 8px;
+      font-size: 16px;
+      width: 300px;
+    }
+    #hasil {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Kalkulator</h2>
+  <input type="text" id="ekspresi" placeholder="Contoh: 3 + 5 * 2 - 4 / 2" />
+  <br />
+  <button id="tombolHitung">Hitung</button>
+
+  <div id="hasil"></div>
+
+  <script>
+    document.getElementById('tombolHitung').addEventListener('click', function() {
+      const ekspresi = document.getElementById("ekspresi").value;
+
+      try {
+        // Validasi input: hanya angka, operator + - * /, spasi, titik, dan kurung
+        if (!/^[0-9+\-*/. ()]+$/.test(ekspresi)) {
+          throw new Error("Input mengandung karakter tidak valid.");
+        }
+
+        // Evaluasi ekspresi
+        let hasil = eval(ekspresi);
+
+        if (typeof hasil === "number" && !isNaN(hasil)) {
+          document.getElementById("hasil").textContent = "Hasil: " + hasil;
+        } else {
+          document.getElementById("hasil").textContent = "Ekspresi tidak valid.";
+        }
+      } catch (e) {
+        document.getElementById("hasil").textContent = "Error: " + e.message;
+      }
+    });
+  </script>
+</body>
+</html>
