@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Praktikan PPW1</title>
+  <script>
+    const isPraktikan = confirm("Apakah Anda praktikan PPW1?");
+    
+    if (isPraktikan) {
+      const nama = prompt("Masukkan nama:");
+      const nim = prompt("Masukkan NIM:");
+      const angkatan = prompt("Masukkan angkatan:");
+
+      const hasil = `
+        Data Praktikan PPW1:
+        Nama     : ${nama}
+        NIM      : ${nim}
+        Angkatan : ${angkatan}
+      `;
+
+      alert(hasil);
+      console.log(hasil);
+    } else {
+      alert("Anda bukan praktikan PPW1, anda tidak boleh masuk!");
+      console.log("Anda bukan praktikan PPW1, anda tidak boleh masuk!");
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
