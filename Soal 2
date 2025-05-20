@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Perbandingan Bilangan</title>
+  <script>
+    const bil1 = parseFloat(prompt("Masukkan bilangan pertama:"));
+    const bil2 = parseFloat(prompt("Masukkan bilangan kedua:"));
+    let hasil = "";
+
+    if (bil1 > bil2) {
+      hasil = "BILANGAN KE-1 LEBIH BESAR DARI BILANGAN KE-2";
+    } else if (bil1 < bil2) {
+      hasil = "BILANGAN KE-2 LEBIH BESAR DARI BILANGAN KE-1";
+    } else if (bil1 === bil2) {
+      hasil = "KEDUA BILANGAN SAMA BESAR";
+    } else {
+      hasil = "Input tidak valid.";
+    }
+
+    alert(hasil);
+    console.log(hasil);
+  </script>
+</head>
+<body>
+</body>
+</html>
