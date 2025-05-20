@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Belajar Javascript</title>
+  <script>
+    alert("Selamat datang di tutorial belajar Javascript");
+
+    function sayHello() {
+      console.log("Hello dari console!");
+      alert("Hello dari alert!");
+    }
+
+    function tampilkanTeks() {
+      const output = document.getElementById("teksOutput");
+      output.innerHTML += "ASELOLE!<br>";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="sayHello()">Klik Aku!</button>
+  <br><br>
+  <button onclick="tampilkanTeks()">Tampilkan Teks</button>
+  <div id="teksOutput"></div>
+</body>
+</html>
